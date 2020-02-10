@@ -28,6 +28,12 @@
 <iframe src='https://public.flourish.studio/visualisation/149973/embed' frameborder='0' scrolling='no' style='width:100%;height:600px;'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/149973/?utm_source=embed&utm_campaign=visualisation/149973' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>
 
 
+## Datawrapper
+
+### Area chart: Evolution of the main sources of CO2 emissions
+<iframe title="Evoluci&oacute;n de las principales fuentes de emisiones de CO2" aria-label="Interactive area chart" id="datawrapper-chart-nHerH" src="//datawrapper.dwcdn.net/nHerH/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="550"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+</script>
+
 
 
 
