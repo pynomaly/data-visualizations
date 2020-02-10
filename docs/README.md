@@ -34,6 +34,31 @@
 <iframe title="Evoluci&oacute;n de las principales fuentes de emisiones de CO2" aria-label="Interactive area chart" id="datawrapper-chart-nHerH" src="//datawrapper.dwcdn.net/nHerH/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="550"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
 </script>
 
+### Line chart: Intention to vote between two parties
+<iframe title="Evoluci&oacute;n de la intenci&oacute;n de voto a PSOE y Podemos" aria-label="Interactive line chart" id="datawrapper-chart-bfpKl" src="//datawrapper.dwcdn.net/bfpKl/12/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="450"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+
+### Scatter chart: Electoral preferences according to socioeconomic category
+<iframe title="Preferencias electorales seg&uacute;n categor&iacute;a socioecon&oacute;mica" aria-label="Dot Plot" id="datawrapper-chart-rmWzk" src="//datawrapper.dwcdn.net/rmWzk/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+
+### Stacked bar chart: How municipalities with the lowest average income in Spain have voted
+<iframe title="As&iacute; han votado los municipios con la renta media m&aacute;s baja de Espa&ntilde;a" aria-label="Stacked Bars" id="datawrapper-chart-x3xv4" src="//datawrapper.dwcdn.net/x3xv4/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="591"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+</script>
+
+### Vertical bar chart: Evolution of the results of Indra Sistemas S.A.
+<iframe title="Evoluci&oacute;n de los resultados de Indra Sistemas S.A." aria-label="Column Chart" id="datawrapper-chart-KK0bN" src="//datawrapper.dwcdn.net/KK0bN/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+</script>
+
+### World buble map: Indra societies in the world
+<iframe title="Sociedades de Indra en el mundo" aria-label="World Symbol map" id="datawrapper-chart-q0bXH" src="//datawrapper.dwcdn.net/q0bXH/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+</script>
+
+### Bar chart: Evolution of Indra workforce
+<iframe title="Evoluci&oacute;n de la plantilla del grupo" aria-label="Stacked Bars" id="datawrapper-chart-DggNJ" src="//datawrapper.dwcdn.net/DggNJ/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="455"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+</script>
+
+### Table: Search for subsidies received by Indra
+<iframe title="Subvenciones recibidas por Indra" aria-label="Table" id="datawrapper-chart-G0jAK" src="//datawrapper.dwcdn.net/G0jAK/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="997"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+</script>
 
 
 
