@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- prepare a DOM container with width and height -->
-    <div id="main"style="width: 600;height:800px;"></div>
+    <div id="main"style="width: 600;height:850px;"></div>
     <script type="text/javascript">
         // format para cambiar el locale
         function format(data)
@@ -27,6 +27,7 @@
         tooltip: {
             trigger: 'axis',
             showContent: true,
+
         },
         dataset: {
             source: [
@@ -39,7 +40,7 @@
         },
         xAxis: {type: 'category'},
         yAxis: {gridIndex: 0},
-        grid: [{bottom: '50%'}],
+        grid: [{bottom: '55%'}],
         series: [
             {type: 'line', smooth: false, seriesLayoutBy: 'row', symbolSize: 8, lineStyle: {width: 4}},
             {type: 'line', smooth: false, seriesLayoutBy: 'row', symbolSize: 8, lineStyle: {width: 4}},
@@ -49,8 +50,8 @@
             {
                 type: 'pie',
                 id: 'pie',
-                radius: '40%',
-                center: ['50%', '80%'],
+                radius: ['25%', '45%'],
+                center: ['50%', '75%'],
                 label: {
                     formatter: '{b}: {d}%'
 
