@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {           
+            type: 'shadow'       
+        },
+        shadowStyle: {opacity: 0.9},
+        formatter: function (params) {
+            var colorSpan = color => '<span style="display:inline-block;margin-right:2px;border-radius:10px;width:12px;height:12px;background-color:' + color + '"></span>';
+            let rez = '<b>' + params[0].axisValue + '</b>' + '<br>';
+            //console.log(params); //quite useful for debug
+            params.forEach(item => {
+                //console.log(item); //quite useful for debug
+                var xx = colorSpan(item.color) + ' ' + item.seriesName + ': ' + item.data.toLocaleString('de-DE') + '<br>'
+                rez += xx;
+            });
+
+            return rez;
+        },           
+    },
+    legend: {
+        data: ['rojo', 'azul', 'cyan', 'naranja', 'verde']
+    },
+    grid: {
+        left: '4%',
+        right: '4%',
+        bottom: '40%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: function(value, index)
+                {  
+                    value = parseFloat(value);
+                    console.log(value);
+                    return value.toLocaleString('de-DE');
+                }   
+        }, 
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Categoría 7', 'Categoría 6', 'Categoría 5', 'Categoría 4', 'Categoría 3', 'Categoría 2', 'Categoría 1'],
+        axisLabel: {
+            fontWeight: 'bold',
+            fontSize: 13
+            }
+    },
+    series: [
+        {
+            name: 'rojo',
+            type: 'bar',
+            barWidth: 40,
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'insideRight',
+                fontWeight: 'bold'
+            },
+            data: [320, 302, 301, 334, 390, 330, 320]
+        },
+        {
+            name: 'azul',
+            type: 'bar',
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'insideRight',
+                fontWeight: 'bold'
+            },
+            data: [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            name: 'cyan',
+            type: 'bar',
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'insideRight',
+                fontWeight: 'bold'
+            },
+            data: [220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            name: 'naranja',
+            type: 'bar',
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'insideRight',
+                fontWeight: 'bold'
+            },
+            data: [150, 212, 201, 154, 190, 330, 410]
+        },
+        {
+            name: 'verde',
+            type: 'bar',
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'insideRight',
+                fontWeight: 'bold',
+                formatter: function(params) {
+                    data = parseFloat(params.value);
+            		return data.toLocaleString('de-DE')
+                },
+            },
+            data: [820, 832, 901, 934, 1290, 1330, 1320]
+        }
+    ]
+};;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
