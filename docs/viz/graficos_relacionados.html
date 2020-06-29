@@ -10,13 +10,7 @@
     <!-- prepare a DOM container with width and height -->
     <div id="main"style="width: 600;height:850px;"></div>
     <script type="text/javascript">
-        // format para cambiar el locale
-        function format(data)
-        {
-	        data = parseFloat(data);
-	        return data.toLocaleString('es-ES', {style: 'number'});
-        }
-
+       
         // based on prepared DOM, initialize echarts instance
         var myChart = echarts.init(document.getElementById('main'));
 
@@ -27,15 +21,26 @@
         tooltip: {
             trigger: 'axis',
             showContent: true,
+            formatter: function (params) {
+                var colorSpan = color => '<span style="display:inline-block;margin-right:1px;border-radius:10px;width:11px;height:11px;background-color:' + color + '"></span>';
+                let rez = '<b>'+ params[0].axisValue + '</b>' + '<br>';
+                //console.log(params); //quite useful for debug
+                params.forEach(item => {
+                    //console.log(item); //quite useful for debug
+                    var xx = colorSpan(item.color) + ' ' + item.seriesName + ': ' + item.value[item.encode.y[0]].toLocaleString('de-DE') + ' toneladas' +'<br>';
+                    rez += xx;
+                });
+                return rez;
+            },   
 
         },
         dataset: {
             source: [
                 ['product', '2012', '2013', '2014', '2015', '2016', '2017'],
-                ['Rojo', 41.1, 30.4, 65.1, 53.3, 83.8, 98.7],
-                ['Azul', 86.5, 92.1, 85.7, 83.1, 73.4, 55.1],
-                ['Celeste', 24.1, 67.2, 79.5, 86.4, 65.2, 82.5],
-                ['Naranja', 55.2, 67.1, 69.2, 72.4, 53.9, 39.1]
+                ['Café', 41.1, 30.4, 65.1, 53.3, 83.8, 98.7],
+                ['Té', 86.5, 92.1, 85.7, 83.1, 73.4, 55.1],
+                ['Cacao', 24.1, 67.2, 79.5, 86.4, 65.2, 82.5],
+                ['Manzanilla', 55.2, 67.1, 69.2, 72.4, 53.9, 39.1]
             ]
         },
         xAxis: {type: 'category'},
@@ -50,7 +55,7 @@
             {
                 type: 'pie',
                 id: 'pie',
-                radius: ['25%', '45%'],
+                radius: ['20%', '40%'],
                 center: ['50%', '75%'],
                 label: {
                     formatter: '{b}: {d}%'
@@ -73,8 +78,10 @@
                 series: {
                     id: 'pie',
                     label: {
-                        formatter: '{b}: {d}%'
-
+                        formatter: function(params) {
+                            data = parseFloat(params.percent);
+		                    return params.name + ': '+ data.toLocaleString('de-DE') + '%'
+                        },
                     },
                     encode: {
                         value: dimension,
