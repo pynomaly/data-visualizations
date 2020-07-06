@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+var data3 = [];
+var data4 = [];
+
+for (var i = 0; i < 10; i++) {
+    xAxisData.push('Día ' + (i+1));
+    data1.push((Math.random() * 2).toFixed(2));
+    data2.push(-Math.random().toFixed(2));
+    data3.push((Math.random() * 5).toFixed(2));
+    data4.push((Math.random() + 0.3).toFixed(2));
+}
+
+var emphasisStyle = {
+    itemStyle: {
+        barBorderWidth: 1,
+        shadowBlur: 20,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowColor: 'rgba(0,0,0,0.5)'
+    }
+};
+
+option = {
+    backgroundColor: '#fff',
+    legend: {
+        data: ['categoría 1', 'categoría 2', 'categoría 3', 'categoría 4'],
+        center: 10
+    },
+
+    tooltip: {
+        formatter: function tooltipFormatter (params) {
+            var colorSpan = color => '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:12px;height:12px;background-color:' + color + '"></span>';
+	        data = parseFloat(params.value);
+		    return '<b>' + params.name + '</b>' + '<br>'+ colorSpan(params.color) + ' '+ params.seriesName + ': '+ data.toLocaleString('de-DE')
+        },
+    },
+    xAxis: {
+        data: xAxisData,
+        // name: 'X Axis',
+        axisLine: {onZero: false},
+        splitLine: {show: true},
+        splitArea: {show: false}
+    },
+    yAxis: {
+        inverse: false,
+        min: -2,
+        max: 6,
+        splitLine: {show: true},
+        splitArea: {show: false}
+    },
+    series: [
+        {
+            name: 'categoría 1',
+            type: 'bar',
+            stack: 'one',
+            emphasis: emphasisStyle,
+            data: data1
+        },
+        {
+            name: 'categoría 2',
+            type: 'bar',
+            stack: 'one',
+            emphasis: emphasisStyle,
+            data: data2
+        },
+        {
+            name: 'categoría 3',
+            type: 'bar',
+            stack: 'two',
+            emphasis: emphasisStyle,
+            data: data3
+        },
+        {
+            name: 'categoría 4',
+            type: 'bar',
+            stack: 'two',
+            emphasis: emphasisStyle,
+            data: data4
+        }
+    ]
+};
+
+myChart.on('brushSelected', renderBrushed);
+
+function renderBrushed(params) {
+    var brushed = [];
+    var brushComponent = params.batch[0];
+
+    for (var sIdx = 0; sIdx < brushComponent.selected.length; sIdx++) {
+        var rawIndices = brushComponent.selected[sIdx].dataIndex;
+        brushed.push('[Series ' + sIdx + '] ' + rawIndices.join(', '));
+    }
+
+    myChart.setOption({
+        title: {
+            backgroundColor: '#333',
+            text: 'SELECTED DATA INDICES: \n' + brushed.join('\n'),
+            bottom: 0,
+            right: 0,
+            width: 100,
+            textStyle: {
+                fontSize: 12,
+                color: '#fff'
+            }
+        }
+    });
+};
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
