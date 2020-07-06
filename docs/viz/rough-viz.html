@@ -62,7 +62,7 @@
     title: "Barras 1",
     titleFontSize: '1.5rem',
     legend: false,
-    width: window.innerWidth*0.2,
+    width: window.innerWidth*0.35,
     //margin: {top: 50, bottom: 100, left: 50, right: 50},
     data: {
       labels: ['Tipo 1', 'Tipo 2', 'Tipo 3', 'Tipo 4'],
@@ -87,7 +87,7 @@
       element: '#vis2',
       titleFontSize: '1.5rem',
       //margin: {top: 50, bottom: 100, left: 50, right: 10},
-      width: window.innerWidth*0.2,
+      width: window.innerWidth*0.35,
       data: 'https://raw.githubusercontent.com/jwilber/random_data/master/owTanks.csv',
       color: 'coral',
       labels: 'name',
@@ -106,9 +106,9 @@
   new roughViz.StackedBar({
   element: '#vis3',
   data: [
-      {month:'Enero', Aguacates:20, Boniatos: 5,  Calabazas: 10},
-      {month:'Febrero', Aguacates:25, Boniatos: 10, Calabazas: 20},
-      {month:'Marzo', Aguacates:30, Boniatos:50, Calabazas:10}
+      {month:'Enero', Aguacates: 20, Boniatos: 5,  Calabazas: 10},
+      {month:'Febrero', Aguacates: 25, Boniatos: 10, Calabazas: 20},
+      {month:'Marzo', Aguacates: 30, Boniatos: 50, Calabazas: 10}
     
   ],
   labels: 'month',
@@ -141,7 +141,7 @@ new roughViz.Scatter(
       y: [240, 140, 40, 160, 100],
     },
     title: 'Gráfico de dispersión',
-    width: 600,
+    width: 800,
     roughness: 1,
     radius: [25, 10, 20, 25, 50],
     fillWeight: 2,
