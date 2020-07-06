@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript">
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(dom);
+            var app = {};
+            option = null;
+            option = {
+                title: {
+                    text: 'Prueba de barras, apiladas y sin apilar', 
+                    show: true,
+                    left: 30
+                    
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {            
+                        type: 'shadow',
+                        shadowStyle: {color: 'grey', opacity: 0.1}
+                        },
+                    formatter: function (params) {
+                        var colorSpan = color => '<span style="display:inline-block;margin-right:2px;border-radius:10px;width:12px;height:12px;background-color:' + color + '"></span>';
+                        let rez = '<b>' + params[0].axisValue + '</b>' + '<br>';
+                            //console.log(params); //quite useful for debug
+                            params.forEach(item => {
+                            //console.log(item); //quite useful for debug
+                            var xx = colorSpan(item.color) + ' ' + item.seriesName + ': ' + item.data.toLocaleString('de-DE') + '<br>'
+                            rez += xx;
+                        });
+                        return rez;
+                    },
+
+                },
+                legend: {
+                    data: ['rojo', 'cyan', 'azul', 'naranja', 'verde'],
+                    right: 30
+                    
+                },
+                grid: {
+                    left: '10%',
+                    right: '10%',
+                    bottom: '5%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'value',
+                        splitLine: {show: false},
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'category',
+                        splitLine: {show: true},
+                        data: ['domingo', 'sábado', 'viernes', 'jueves', 'miércoles', 'martes', 'lunes'],
+                        axisLabel: {fontWeight: 'bold', fontSize: 14}
+                    }
+                ],
+                series: [
+                    {
+                        name: 'rojo',
+                        type: 'bar',
+                        label: {
+                            show: true,
+                            position: 'insideRight',
+                            fontWeight: 'bold'
+                        },
+                        data: [200, 170, 240, 244, 200, 220, 210]
+                    },
+                    {
+                        name: 'azul',
+                        type: 'bar',
+                        stack: 'azul',
+                        label: {
+                            show: true,
+                            position: 'insideRight',
+                            fontWeight: 'bold'
+                        },
+                        data: [320, 302, 341, 374, 390, 450, 420]
+                    },
+                    {
+                        name: 'cyan',
+                        type: 'bar',
+                        stack: 'azul',
+                        label: {
+                            show: true,
+                            position: 'insideLeft',
+                            fontWeight: 'bold'
+                        },
+                        data: [-120, -132, -101, -134, -190, -230, -210]
+                    },
+                    {
+                        name: 'naranja',
+                        type: 'bar',
+                        stack: 'naranja',
+                        label: {
+                            show: true,
+                            position: 'insideRight',
+                            fontWeight: 'bold'
+                        },
+                        data: [120, 132, 101, 134, 190, 230, 210]
+                    },
+                    {
+                        name: 'verde',
+                        type: 'bar',
+                        stack: 'naranja',
+                        label: {
+                            show: true,
+                            position: 'inside',
+                            fontWeight: 'bold'
+                        },
+                        data: [22, 23, 20, 23, 29, 23, 21]
+                    }
+                ]
+            };
+            ;
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+       </script>
+   </body>
+</html>
