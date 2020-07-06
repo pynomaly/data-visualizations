@@ -2,4 +2,4 @@
 
 Published viz, view at https://pynomaly.github.io/data-visualizations
 
-Test viz, view at https://pynomaly.github.io/data-visualizations/test
+Drafs, view at https://pynomaly.github.io/data-visualizations/test
