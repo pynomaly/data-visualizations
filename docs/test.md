@@ -12,4 +12,4 @@
 ## Rough viz
 
 ### Different viz
-<iframe src="https://pynomaly.github.io/data-visualizations/viz/rough-viz.html" name="iFrame Name" scrolling="No" height="1500px" width="100%" style="border: none;"></iframe>
+<iframe src="https://pynomaly.github.io/data-visualizations/viz/rough-viz.html" name="iFrame Name" scrolling="No" height="1800px" width="100%" style="border: none;"></iframe>
