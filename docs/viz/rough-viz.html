@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/rough-viz@1.0.5"></script>
+  <style>
+	    .wrapper {
+	      display: flex;
+	      flex: wrap;
+        order: row;
+	    }
+  </style>
+</head>
+<body>
+
+
+<div class="wrapper">
+    <div id="vis0"></div>
+</div>
+
+<div class="wrapper">
+    <div id="vis3"></div>
+</div>
+
+<div class="wrapper">
+    <div id="vis1"></div>
+    <div id="vis2"></div>
+</div>
+
+<div class="wrapper">
+    <div id="vis4"></div>
+</div>
+
+  <script> 
+  new roughViz.Donut(
+  {
+    element: '#vis0',
+    legend: false,
+    data: {
+      labels: ['Azul', 'Verde', 'Violeta'],
+      values: [30, 10, 20]
+    },
+    title: 'Gráfico de donut',
+    titleFontSize: '2rem',
+    labels: 'letter',
+    values: 'frequency',
+    width: window.innerWidth*0.5,
+    stroke: 'coral',
+    strokeWidth: 2,
+    colors: ['blue', 'lightgreen', 'purple'],
+    fillWeight: 1.5,
+    font: 1
+  }
+);
+
+  </script>
+
+  <script> 
+    new roughViz.BarH(
+  {
+    element: '#vis1',
+    title: "Barras 1",
+    titleFontSize: '1.5rem',
+    legend: false,
+    width: window.innerWidth*0.2,
+    margin: {top: 50, bottom: 100, left: 50, right: 50},
+    data: {
+      labels: ['Tipo 1', 'Tipo 2', 'Tipo 3', 'Tipo 4'],
+      values: [8, 4, 6, 2]
+    },
+    xLabel: 'Cantidad (Valor)',
+    strokeWidth: 1,
+    highlight: 'lightgreen',
+    color: 'green',
+    roughness: 0,
+    fillWeight: 2,
+    font: 1,
+    labelFontSize: 0,
+  }
+);
+
+  </script>
+
+  <script> 
+  new roughViz.BarH(
+    {
+      element: '#vis2',
+      titleFontSize: '1.5rem',
+      margin: {top: 50, bottom: 100, left: 50, right: 10},
+      width: window.innerWidth*0.2,
+      data: 'https://raw.githubusercontent.com/jwilber/random_data/master/owTanks.csv',
+      color: 'coral',
+      labels: 'name',
+      values: 'health',
+      title: "Barras II",
+      roughness: 0,
+      fillWeight: 0,
+      highlight: 'gold',
+      
+    }
+  );
+
+  </script>
+
+<script>
+  new roughViz.StackedBar({
+  element: '#vis3',
+  data: [
+      {month:'Enero', Aguacates:20, Boniatos: 5,  Calabazas: 10},
+      {month:'Febrero', Aguacates:25, Boniatos: 10, Calabazas: 20},
+      {month:'Marzo', Aguacates:30, Boniatos:50, Calabazas:10}
+    
+  ],
+  labels: 'month',
+  title: 'Gráfico de columnas apiladas',
+  titleFontSize: '1.5rem',
+  width: window.innerWidth * 0.5,
+margin: {top: 50, bottom: 100, left: 50, right: 10},
+  roughness: 1,
+  colors: [
+    'blue',
+    'lightgreen',
+    'skyblue',
+    'purple',
+  ],
+  fillWeight: 1,
+  strokeWidth: 1,
+  fillStyle: 'cross-hatch',
+  stroke: 'black',
+  highlight: 'silver',
+  font: 1,
+});
+  </script>
+
+<script>
+new roughViz.Scatter(
+  {
+    element: '#vis4',
+    data: {
+      x: [1, 2, 3, 7, 5, 9],
+      y: [240, 140, 40, 160, 100],
+    },
+    title: 'Gráfico de dispersión',
+    width: 600,
+    roughness: 1,
+    radius: [25, 10, 20, 25, 50],
+    fillWeight: 2,
+    axisRoughness: 0,
+    height: 450,
+    colors: ['green', 'orange', 'lightblue', 'lightgreen', 'purple'],
+    curbZero: true,
+    margin: {top: 50, bottom: 100, left: 50, right: 10},
+    font: 1,
+  }
+);
+  </script>
