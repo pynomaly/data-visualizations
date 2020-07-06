@@ -1,3 +1,5 @@
 # data-visualizations
 
-View at https://pynomaly.github.io/data-visualizations
+Published viz, view at https://pynomaly.github.io/data-visualizations
+
+Test viz, view at https://pynomaly.github.io/data-visualizations/test
