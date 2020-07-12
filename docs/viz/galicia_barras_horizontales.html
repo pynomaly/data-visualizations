@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {           
+            type: 'shadow',
+            shadowStyle: {color: 'grey', opacity: 0.1}  
+        },
+        shadowStyle: {opacity: 0.9},
+        formatter: function (params) {
+            var colorSpan = color => '<span style="display:inline-block;margin-right:2px;border-radius:10px;width:12px;height:12px;background-color:' + color + '"></span>';
+            let rez = '<b>' + params[0].axisValue + '</b>' + '<br>';
+            //console.log(params); //quite useful for debug
+            params.forEach(item => {
+                //console.log(item); //quite useful for debug
+                var xx = colorSpan(item.color) + ' ' + item.seriesName + ': ' + item.data.toLocaleString('de-DE') + ' escaños' + '<br>'
+                rez += xx;
+            });
+
+            return rez;
+        },           
+    },
+        color: ['#0356a1','#e10819', '#94c2e4', '#702A68', '#FF6419','#0064FF',  '#57ba33', '#AFBF00'],
+    title: {
+            text: 'Elecciones Galicia 2020', 
+            show: true,
+            left: "center",
+            pad: 5,       
+            },
+    legend: {
+        data: ['PP', 'PSdeG', 'BNG', 'Galicia en Común'],
+        top: 35,
+        padding: [5, 10]
+    },
+    grid: {
+        left: '4%',
+        right: '4%',
+        bottom: '4%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: function(value, index)
+                {  
+                    value = parseFloat(value);
+                    console.log(value);
+                    return value.toLocaleString('de-DE');
+                }   
+        }, 
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Pontevedra', 'Ourense', 'Lugo', 'A Coruña'],
+        axisLabel: {
+            fontWeight: 'bold',
+            fontSize: 13
+            }
+    },
+    series: [
+        {
+            name: 'PP',
+            type: 'bar',
+            barWidth: 85,
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'inside',
+                fontWeight: 'bold'
+            },
+            data: [5, 7, 4, 3]
+        },
+        {
+            name: 'PSdeG',
+            type: 'bar',
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'inside',
+                fontWeight: 'bold'
+            },
+            data: [5, 7, 4, 3]
+        },
+        {
+            name: 'BNG',
+            type: 'bar',
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'inside',
+                fontWeight: 'bold'
+            },
+            data: [5, 7, 4, 3]
+        },
+        {
+            name: 'Galicia en Común',
+            type: 'bar',
+            stack: 'st',
+            label: {
+                show: true,
+                position: 'inside',
+                fontWeight: 'bold'
+            },
+            data: [5, 7, 4, 3]
+        },
+    ]
+};;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

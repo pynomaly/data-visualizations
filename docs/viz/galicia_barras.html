@@ -30,7 +30,7 @@ option = {
                 return rez;
             },
     },
-    color: ['#0356a1','#e10819', '#94c2e4', '#702A68', '#FF6419','#0064FF',  '#57ba33', '#AFBF00'],
+    color: ['#0356a1', '#94c2e4', '#e10819', '#702A68', '#57ba33', '#FF6419','#0064FF', '#AFBF00'],
     title: {
             text: 'Elecciones Galicia 2020', 
             show: true,
@@ -38,7 +38,7 @@ option = {
             pad: 5,       
             },
     legend: {
-        data: ['PP', 'PSdeG', 'BNG', 'Galicia en Común'],
+        data: ['PP', 'BNG', 'PSdeG', 'Galicia en Común'],
         top: 35,
         padding: [5, 10]
     },
@@ -76,12 +76,12 @@ option = {
             data: [276223, 96728, 92418, 211307]
         },
         {
-            name: 'PSdeG',
+            name: 'BNG',
             type: 'bar',
             data: [99263, 34811, 30672, 89806]
         },
         {
-            name: 'BNG',
+            name: 'PSdeG-PSOE',
             type: 'bar',
             data: [51043, 13543, 10500, 43896]
         },
@@ -90,7 +90,13 @@ option = {
             type: 'bar',
             data: [111866, 28125, 24005, 107422]
         },
-
+        {
+            name: 'Vox',
+            type: 'bar',
+            barWidth: 10,
+            stack: 'si',
+            data: [3280, 2890, 183, 1102]
+        },
         {
             name: "C's",
             type: 'bar',
@@ -102,13 +108,6 @@ option = {
             type: 'bar',
             stack: 'si',
             data: [1200, 323, 518, 1213]
-        },
-        {
-            name: 'Vox',
-            type: 'bar',
-            barWidth: 10,
-            stack: 'si',
-            data: [3280, 2890, 183, 1102]
         },
         {
             name: 'PACMA',
