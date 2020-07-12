@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {            
+            type: 'shadow',
+            shadowStyle: {color: 'grey', opacity: 0.1}
+        },
+            formatter: function (params) {
+                var colorSpan = color => '<span style="display:inline-block;margin-right:2px;border-radius:10px;width:12px;height:12px;background-color:' + color + '"></span>';
+                let rez = '<b>' + params[0].axisValue + '</b>' + '<br>';
+                    //console.log(params); //quite useful for debug
+                    params.forEach(item => {
+                    //console.log(item); //quite useful for debug
+                    var xx = colorSpan(item.color) + ' ' + '<b>' + item.seriesName + '</b>' + ': ' + item.data.toLocaleString('de-DE') + ' votos'+'<br>'
+                    rez += xx;
+                });
+                return rez;
+            },
+    },
+    color: ['#0356a1','#e10819', '#94c2e4', '#702A68', '#FF6419','#0064FF',  '#57ba33', '#AFBF00'],
+    title: {
+                text: 'Elecciones Galicia 2020', 
+                show: true,
+                left: 500
+                
+            },
+    legend: {
+        data: ['PP', 'PSdeG', 'BNG', 'Galicia en Común-Anova Mareas', "C's", 'Marea Galeguista', 'Vox', 'PACMA'],
+        top: 30
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'category',
+            data: ['A Coruña', 'Lugo', 'Ourense', 'Pontevedra'],
+            axisLabel: {fontWeight: 'bold', fontSize: 14},
+            splitLine: {show: true},
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            axisLabel: {
+                formatter: function(value, index)
+                    {  
+                        value = parseFloat(value);
+                        return value.toLocaleString('de-DE');
+                    }   
+            },
+            splitLine: {show: false},
+        }
+    ],
+    series: [
+        {
+            name: 'PP',
+            type: 'bar',
+            data: [276223, 96728, 92418, 211307]
+        },
+        {
+            name: 'PSdeG',
+            type: 'bar',
+            
+            data: [99263, 34811, 30672, 89806]
+        },
+        {
+            name: 'BNG',
+            type: 'bar',
+            
+            data: [51043, 13543, 10500, 43896]
+        },
+        {
+            name: 'Galicia en Común-Anova Mareas',
+            type: 'bar',
+            
+            data: [111866, 28125, 24005, 107422]
+        },
+
+        {
+            name: "C's",
+            type: 'bar',
+            barWidth: 15,
+            stack: 'si',
+            data: [19248, 5062, 4797, 18996]
+        },
+        {
+            name: 'Marea Galeguista',
+            type: 'bar',
+            stack: 'si',
+            data: [1200, 323, 518, 1213]
+        },
+        {
+            name: 'Vox',
+            type: 'bar',
+            stack: 'si',
+            data: [3280, 2890, 183, 1102]
+        },
+        {
+            name: 'PACMA',
+            type: 'bar',
+            stack: 'si',
+            data: [6082, 1445, 0, 5949]
+        }
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
