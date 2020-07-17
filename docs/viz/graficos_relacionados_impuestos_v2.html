@@ -28,7 +28,7 @@
                 //console.log(params); //quite useful for debug
                 params.forEach(item => {
                     //console.log(item); //quite useful for debug
-                    var xx = colorSpan(item.color) + ' ' + item.seriesName + ': ' + item.value[item.encode.y[0]].toLocaleString('de-DE') + ' millones de euros' +'<br>';
+                    var xx = colorSpan(item.color) + ' ' + item.seriesName + ': ' + item.value[item.encode.y[0]].toLocaleString('de-DE') + ' mill. de €' +'<br>';
                     rez += xx;
                 });
                 return rez;
