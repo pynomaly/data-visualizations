@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- including ECharts file -->
+    <script src="https://echarts.cdn.apache.org/examples/vendors/echarts/echarts.min.js"></script>
+</head>
+<body>
+    <!-- prepare a DOM container with width and height -->
+    <div id="main"style="width: 600;height:850px;"></div>
+    <script type="text/javascript">
+       
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('main'));
+
+        setTimeout(function () {
+
+    option = {
+        color: ['#005943','#4da88d', '#b75618', '#fd8c48', '#c4c4c4','#6e7074', '#546570', '#c4ccd3'],
+        legend: {},
+        tooltip: {
+            trigger: 'axis',
+            showContent: true,
+            formatter: function (params) {
+                var colorSpan = color => '<span style="display:inline-block;margin-right:1px;border-radius:10px;width:11px;height:11px;background-color:' + color + '"></span>';
+                let rez = '<b>'+ params[0].axisValue + '</b>' + '<br>';
+                //console.log(params); //quite useful for debug
+                params.forEach(item => {
+                    //console.log(item); //quite useful for debug
+                    var xx = colorSpan(item.color) + ' ' + item.seriesName + ': ' + item.value[item.encode.y[0]].toLocaleString('de-DE') + ' mill. de €' +'<br>';
+                    rez += xx;
+                });
+                return rez;
+            },   
+
+        },
+        dataset: {
+            source: [
+                ['product', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'],
+                ['IRPF', 72614,	71341, 63857, 66977, 69803, 70619, 69951, 72662, 72346, 72416, 77038, 82859, 86892],
+                ['IVA', 55851, 48021, 33567, 49086, 49302, 50464, 51931, 56174, 60305, 62845, 63647, 70177, 71538],
+                ['Sociedades', 44823, 27301, 20188, 16198, 16611, 21435, 19945, 18713, 20649, 21678, 23143, 24838, 23733, 21380],
+                ['Imp. especiales', 19786,	19570, 19349, 19806, 18983, 18209, 19073, 19104, 19147, 19866, 20308, 20528, 21380],
+                ['Otros tributos', 7601, 7220, 7062, 7469, 7061, 7840, 7947, 8335, 9562, 9444, 9815, 10284, 9265]
+            ]
+        },
+        xAxis: {type: 'category'},
+        yAxis: {
+            gridIndex: 0,
+            type: 'value',
+            axisLabel: {
+                formatter: function(value, index)
+                {  
+                value = parseFloat(value);
+                return value.toLocaleString('de-DE');
+                }   
+            }, 
+        }, 
+        grid: [{bottom: '55%'}],
+        series: [
+            {type: 'line', smooth: false, seriesLayoutBy: 'row', symbolSize: 8, lineStyle: {width: 4}},
+            {type: 'line', smooth: false, seriesLayoutBy: 'row', symbolSize: 8, lineStyle: {width: 4}},
+            {type: 'line', smooth: false, seriesLayoutBy: 'row', symbolSize: 8, lineStyle: {width: 4}},
+            {type: 'line', smooth: false, seriesLayoutBy: 'row', symbolSize: 8, lineStyle: {width: 4}},
+            {type: 'line', smooth: false, seriesLayoutBy: 'row', symbolSize: 8, lineStyle: {width: 4}},
+
+
+            {
+                type: 'pie',
+                id: 'pie',
+                radius: ['20%', '40%'],
+                center: ['50%', '75%'],
+                label: {
+                    //color: 'black',
+                    fontWeight: 'bold',
+                    formatter: '{b}: {d}%'
+
+                },
+                encode: {
+                    itemName: 'product',
+                    value: '2012',
+                    tooltip: '2018'
+                }
+            }
+        ]
+    };
+
+    myChart.on('updateAxisPointer', function (event) {
+        var xAxisInfo = event.axesInfo[0];
+        if (xAxisInfo) {
+            var dimension = xAxisInfo.value + 1;
+            myChart.setOption({
+                series: {
+                    id: 'pie',
+                    label: {
+                        formatter: function(params) {
+                            data = parseFloat(params.percent);
+		                    return params.name + ': '+ data.toLocaleString('de-DE') + '%'
+                        },
+                    },
+                    encode: {
+                        value: dimension,
+                        tooltip: dimension
+                    }
+                }
+            });
+        }
+    });
+
+    myChart.setOption(option);
+
+});
+    </script>
+</body>
+</html>
+
