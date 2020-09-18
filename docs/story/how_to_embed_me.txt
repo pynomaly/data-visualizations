@@ -24,3 +24,7 @@ Notes
 1. Your {{URL}} must be a full path, not a local file URL - in other words it should begin http:// or https://, not file://.
 2. If necessary, also update the height and width.
 3. You may not remove the Flourish credit unless you are an enterprise customer or have permission from Flourish HQ.
+
+    <div class="flourish-embed" data-src="https://pynomaly.github.io/data-visualizations/story/index.html" data-height="100%"><script src="https://pynomaly.github.io/data-visualizations/story/flourish.embed.js"></script></div>
+    
+    https://pynomaly.github.io/data-visualizations/story/index.html
