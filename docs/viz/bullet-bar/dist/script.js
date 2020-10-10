@@ -84,7 +84,7 @@ series.clustered = false;
 series.tooltipText = "Población general: [bold]{valueY}[/]";
 series.fill = am4core.color("#000000");
 series.strokeWidth = 0;
-series.columns.template.width = am4core.percent(60);
+series.columns.template.width = am4core.percent(50);
 
   
 var series2 = chart.series.push(new am4charts.ColumnSeries());
