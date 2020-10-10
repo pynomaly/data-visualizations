@@ -60,6 +60,7 @@ var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 //valueAxis.title.fontWeight = 800;
 valueAxis.min = 0;
 valueAxis.cursorTooltipEnabled = false;
+valueAxis.fontSize = 11.5;
 
 
 
@@ -101,8 +102,10 @@ chart.cursor.lineY.disabled = true;
 var label = categoryAxis.renderer.labels.template;
 label.truncate = false;
 label.wrap = true;
-label.maxWidth = 200;
+label.maxWidth = 85;
 label.tooltipText = "{category}";
+label.fontSize = 11.5;
+
 
 categoryAxis.events.on("sizechanged", function(ev) {
   var axis = ev.target;

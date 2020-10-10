@@ -72,7 +72,7 @@ var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 //valueAxis.title.fontWeight = 800;
 valueAxis.min = 0;
 valueAxis.cursorTooltipEnabled = false;
-valueAxis.fontSize = 12;
+valueAxis.fontSize = 11.5;
 
 
 
