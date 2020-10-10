@@ -73,6 +73,8 @@ var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 valueAxis.min = 0;
 valueAxis.cursorTooltipEnabled = false;
 
+
+
 // Create series
 var series = chart.series.push(new am4charts.ColumnSeries());
 series.dataFields.valueY = "Población general";
@@ -82,7 +84,7 @@ series.clustered = false;
 series.tooltipText = "Población general: [bold]{valueY}[/]";
 series.fill = am4core.color("#000000");
 series.strokeWidth = 0;
-series.columns.template.width = am4core.percent(50);
+series.columns.template.width = am4core.percent(60);
 
   
 var series2 = chart.series.push(new am4charts.ColumnSeries());
@@ -106,6 +108,28 @@ chart.cursor.lineY.disabled = true;
 //title.fontSize = 25;
 //title.fontWeight = 600;
 //title.marginBottom = 10;
+
+// Configure axis label
+var label = categoryAxis.renderer.labels.template;
+label.truncate = false;
+label.wrap = true;
+label.maxWidth = 110;
+label.tooltipText = "{category}";
+
+categoryAxis.events.on("sizechanged", function(ev) {
+  var axis = ev.target;
+  var cellWidth = axis.pixelWidth / (axis.endIndex - axis.startIndex);
+  if (cellWidth < axis.renderer.labels.template.maxWidth) {
+    axis.renderer.labels.template.rotation = -90;
+    axis.renderer.labels.template.horizontalCenter = "right";
+    axis.renderer.labels.template.verticalCenter = "middle";
+  }
+  else {
+    axis.renderer.labels.template.rotation = 0;
+    axis.renderer.labels.template.horizontalCenter = "middle";
+    axis.renderer.labels.template.verticalCenter = "top";
+  }
+});
 
 // responsive
 
@@ -172,12 +196,8 @@ chart.responsive.rules.push({
       return state;
     }
     
-    // if ((target instanceof am4core.Rectangle) && (target.parent instanceof am4charts.AxisLabel) && (target.parent.parent instanceof am4charts.AxisRendererY)) { 
-    //   var state = target.states.create(stateId);
-    //   state.properties.fill = am4core.color("#f00");
-    //   state.properties.fillOpacity = 0.5;
-    //   return state;
-    // }
+    
+
     
     return null;
   }
