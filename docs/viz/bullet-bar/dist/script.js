@@ -115,6 +115,7 @@ label.truncate = false;
 label.wrap = true;
 label.maxWidth = 110;
 label.tooltipText = "{category}";
+label.fontSize = 12;
 
 categoryAxis.events.on("sizechanged", function(ev) {
   var axis = ev.target;
