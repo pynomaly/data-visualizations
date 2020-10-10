@@ -152,9 +152,9 @@ chart.responsive.rules.push({
     if (target instanceof am4charts.Chart) {
       var state = target.states.create(stateId);
       state.properties.paddingTop = 0;
-      state.properties.paddingRight = 5;
+      state.properties.paddingRight = 1;
       state.properties.paddingBottom = 5;
-      state.properties.paddingLeft = 5;
+      state.properties.paddingLeft = 1;
       return state;
     }
     
@@ -185,9 +185,9 @@ chart.responsive.rules.push({
       var state = target.states.create(stateId);
       state.properties.dy = -15;
       state.properties.paddingTop = 3;
-      state.properties.paddingRight = 5;
+      state.properties.paddingRight = 1;
       state.properties.paddingBottom = 3;
-      state.properties.paddingLeft = 5;
+      state.properties.paddingLeft = 1;
       
       // Create a separate state for background
       target.setStateOnChildren = true;
