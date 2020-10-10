@@ -114,7 +114,7 @@ chart.cursor.lineY.disabled = true;
 var label = categoryAxis.renderer.labels.template;
 label.truncate = false;
 label.wrap = true;
-label.maxWidth = 120;
+label.maxWidth = 100;
 label.tooltipText = "{category}";
 label.fontSize = 12;
 
