@@ -114,7 +114,7 @@ chart.cursor.lineY.disabled = true;
 var label = categoryAxis.renderer.labels.template;
 label.truncate = false;
 label.wrap = true;
-label.maxWidth = 100;
+label.maxWidth = 90;
 label.tooltipText = "{category}";
 label.fontSize = 12;
 
@@ -152,9 +152,9 @@ chart.responsive.rules.push({
     if (target instanceof am4charts.Chart) {
       var state = target.states.create(stateId);
       state.properties.paddingTop = 0;
-      state.properties.paddingRight = 15;
+      state.properties.paddingRight = 5;
       state.properties.paddingBottom = 10;
-      state.properties.paddingLeft = 15;
+      state.properties.paddingLeft = 5;
       return state;
     }
     
