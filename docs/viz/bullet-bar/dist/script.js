@@ -114,7 +114,7 @@ chart.cursor.lineY.disabled = true;
 var label = categoryAxis.renderer.labels.template;
 label.truncate = false;
 label.wrap = true;
-label.maxWidth = 90;
+label.maxWidth = 85;
 label.tooltipText = "{category}";
 label.fontSize = 12;
 
@@ -153,7 +153,7 @@ chart.responsive.rules.push({
       var state = target.states.create(stateId);
       state.properties.paddingTop = 0;
       state.properties.paddingRight = 5;
-      state.properties.paddingBottom = 10;
+      state.properties.paddingBottom = 5;
       state.properties.paddingLeft = 5;
       return state;
     }
