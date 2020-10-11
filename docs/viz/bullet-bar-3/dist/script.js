@@ -102,9 +102,10 @@ chart.cursor.lineY.disabled = true;
 var label = categoryAxis.renderer.labels.template;
 label.truncate = false;
 label.wrap = true;
-label.maxWidth = 85;
+label.maxWidth = 120;
 label.tooltipText = "{category}";
 label.fontSize = 11.5;
+//label.TextAlign = "middle";
 
 
 categoryAxis.events.on("sizechanged", function(ev) {
