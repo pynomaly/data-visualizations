@@ -6,6 +6,8 @@
 
 <iframe src="https://pynomaly.github.io/data-visualizations/viz/historical-population-pyramid/dist" name="Line-pyramid" scrolling="No" height="600px" width="100%" style="border: none;"></iframe>
 
+<iframe src="https://pynomaly.github.io/data-visualizations/viz/divergent-stacked-bars" name="Stacked-bars" scrolling="No" height="600px" width="100%" style="border: none;"></iframe>
+
 ## Echarts
 
 ### Relational viz
