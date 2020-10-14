@@ -2,6 +2,9 @@
 
 ## Flourish
 
+### Stacked bars
+<div class="flourish-embed flourish-chart" data-src="visualisation/3953726" data-url="https://flo.uri.sh/visualisation/3953726/embed" aria-label=""><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
 ### Area chart
 <div class="flourish-embed flourish-chart" data-src="visualisation/2382390" data-url="https://flo.uri.sh/visualisation/2382390/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
@@ -32,6 +35,18 @@
 
 
 ## Datawrapper
+
+### Map chart with table tooltip
+<iframe title="Intención de voto en referéndum en las comunidades estudiadas" aria-label="Mapa" id="datawrapper-chart-ieJ4m" src="https://datawrapper.dwcdn.net/ieJ4m/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="454"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+</script>
+
+### Map chart with line chart tooltip
+<iframe title="Gasto total en I+D por comunidad autónoma" aria-label="Mapa" id="datawrapper-chart-9REHU" src="https://datawrapper.dwcdn.net/9REHU/12/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="483"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+</script>
+
+### Bar chart
+<iframe title="Necesidad de un referéndum entre monarquía y repúblicasegún edad" aria-label="Split bars" id="datawrapper-chart-vh7o1" src="https://datawrapper.dwcdn.net/vh7o1/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="439"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
+</script>
 
 ### Area chart: Evolution of the main sources of CO2 emissions
 <iframe title="Evoluci&oacute;n de las principales fuentes de emisiones de CO2" aria-label="Interactive area chart" id="datawrapper-chart-nHerH" src="//datawrapper.dwcdn.net/nHerH/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="550"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
