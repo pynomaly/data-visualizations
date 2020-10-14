@@ -24,11 +24,11 @@
 ### Bullet bar
 <iframe src="https://pynomaly.github.io/data-visualizations/viz/bullet-bar/dist/" name="Bullet-bar" scrolling="No" height="600px" width="100%" style="border: none;"></iframe>
 
-###  Column chart with axis break
+### Column chart with axis break
 <iframe src="https://pynomaly.github.io/data-visualizations/viz/column-chart-with-axis-break/dist" name="Axis-break" scrolling="No" height="600px" width="100%" style="border: none;"></iframe>
 
-
-
+### Relational line and pyramid charts
+<iframe src="https://pynomaly.github.io/data-visualizations/viz/historical-population-pyramid/dist" name="Line-pyramid" scrolling="No" height="600px" width="100%" style="border: none;"></iframe>
 
 ## Rough viz
 
