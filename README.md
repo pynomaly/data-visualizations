@@ -1,5 +1,5 @@
 # data-visualizations
 
-**Published viz**, view at https://pynomaly.github.io/data-visualizations
+**Published viz: Datawrapper and Flourish examples**, view at https://pynomaly.github.io/data-visualizations
 
-**Drafts**, view at https://pynomaly.github.io/data-visualizations/test
+**Other projects: Echarts, Amcharts and other JavaScript Libraries**, view at https://pynomaly.github.io/data-visualizations/test
