@@ -19,7 +19,7 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("chartdiv", am4maps.MapChart);
 chart.geodata = am4geodata_worldLow;
 chart.projection = new am4maps.projections.Miller();
-chart.homeZoomLevel = 2.5;
+chart.homeZoomLevel = 2;
 chart.homeGeoPoint = {
     latitude: 28,
     longitude: -60
