@@ -21,8 +21,8 @@ chart.geodata = am4geodata_worldLow;
 chart.projection = new am4maps.projections.Miller();
 chart.homeZoomLevel = 2;
 chart.homeGeoPoint = {
-    latitude: 22,
-    longitude: -60
+    latitude: 10,
+    longitude: -48
 };
 
 // Create map polygon series
